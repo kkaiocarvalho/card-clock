@@ -1,0 +1,173 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(45deg, rgb(255, 251, 0), rgb(99, 8, 245));
+}
+
+.card{
+    position: relative;
+    width: 350px;
+    height: 150px;
+    background: #fff;
+    border-radius: 20px;
+    transition: 0,5s;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, .7);
+}
+
+.card:hover{
+    height: 450px;
+}
+
+.imgBX{
+    left: 50%;
+    top: -50px;
+    transform: translate(-50%);
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background: #000;
+    border-radius: 20px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, .7);
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.card:hover .imgBX{
+    width: 250px;
+    height: 250px;
+}
+
+.imgBX img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card .content{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    overflow: hidden;
+}
+
+.card .content .details{
+    padding: 40px;
+    text-align: center;
+    width: 100%;
+    transition: 0.5s;
+    transform: translateY(150px);
+}
+
+.card:hover .content .details{
+    transform: translateY(0px)
+}
+
+.card .content .details h2{
+    font-size: 1em;
+    font-weight: 600;
+    color: #555;
+    line-height: 1.2em;
+}
+
+.card .content .details h2 span{
+    font-size: 0.55em;
+    font-weight: 500;
+    opacity: 0.5;
+}
+
+.card .content .details .data{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.card .content .details .data h3{
+    font-size: 1em;
+    color: #555;
+    line-height: 1.2em;
+    font-weight: 600;
+}
+
+.card .content .details .data h3 span{
+    font-size: 0.85em;
+    font-weight: 400;
+    opacity: 0.5;
+}
+
+.card .content .details .actionBtn{
+    display: flex;
+    justify-content: space-between;
+    /*gap: 20px;*/
+}
+
+.card .content .details .actionBtn button{
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    font-size: #fff;
+    background: #ff5f95;
+    cursor: pointer;
+}
+
+.card .content .details .actionBtn button:nth-child(2){
+    border: 1px solid #999;
+    color: #999;
+    background: #fff;
+}
+
+.relogio {
+    display: flex;
+    align-items:center;
+    justify-content: space-around;
+    height: 100px;
+    width: 350px;
+    background: transparent;
+    border-radius: 20px;
+}
+
+.relogio div {
+    height: 100px;
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #555;
+    background: rgba(241, 240, 240, 0.9);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, .7);
+    border-radius: 20px;
+    letter-spacing: 2px;
+}
+
+.relogio span {
+    font-weight: bolder;
+    font-size: 40px;
+}
+
+.relogio span.tempo {
+    font-size: 10px;
+}
+
+body{
+    flex-direction: column;
+    display: flex;
+}
+
+body .relogio{
+    margin: 20px;
+}
